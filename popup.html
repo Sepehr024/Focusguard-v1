@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FocusGuard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand-mark">FG</div>
+      <div>
+        <h1>FocusGuard</h1>
+        <p class="subtitle">Protect your attention.</p>
+      </div>
+    </header>
+
+    <section class="timer-card">
+      <p class="eyebrow">FOCUS SESSION</p>
+      <div id="timer" class="timer">25:00</div>
+      <p id="timer-status" class="muted">Ready when you are.</p>
+      <div class="timer-actions">
+        <button id="start-btn" class="primary">Start 25 min</button>
+        <button id="stop-btn" class="secondary">Stop</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><span id="sessions" class="stat-number">0</span><span class="stat-label">Sessions today</span></div>
+      <div><span id="minutes" class="stat-number">0</span><span class="stat-label">Focus minutes</span></div>
+    </section>
+
+    <section class="sites">
+      <div class="section-heading">
+        <h2>Blocked websites</h2>
+        <span class="count" id="site-count">0</span>
+      </div>
+      <form id="site-form">
+        <input id="site-input" type="text" placeholder="example.com" autocomplete="off" spellcheck="false">
+        <button class="add-btn" type="submit" aria-label="Add website">+</button>
+      </form>
+      <p class="hint">Add a domain to prevent it opening during a focus session.</p>
+      <ul id="site-list"></ul>
+    </section>
+    <footer>Private by design · Data stays in this browser</footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
